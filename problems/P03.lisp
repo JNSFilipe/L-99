@@ -1,0 +1,10 @@
+(defun element-at (l i)
+  (unless (or (null l) (< i 1))
+    (if (eq i 1)
+      (car l)
+      (element-at (rest l) (- i 1))
+    )
+  )
+)
+
+(element-at '(a b c d) 3)
